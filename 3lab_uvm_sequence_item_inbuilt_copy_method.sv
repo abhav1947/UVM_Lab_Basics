@@ -1,7 +1,8 @@
 // Using the inbuilt copy and print method
 class write_txn extends uvm_sequence_item;
   randc bit [3:0] data1, data2, data3;
-  
+
+  // The data variables used must be registered with factory to make use of the inbuilt methods such as copy or print
   `uvm_object_utils_begin(write_txn)
   	`uvm_field_int(data1, UVM_ALL_ON)
     `uvm_field_int(data2, UVM_ALL_ON)
