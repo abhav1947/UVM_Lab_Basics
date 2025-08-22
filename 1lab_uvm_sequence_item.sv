@@ -1,9 +1,9 @@
 class my_trans extends uvm_sequence_item;
   
-  // Registering the class created with factory for handle creation and overriding 
+  // Registering the class created with factory for handle creation and factory overriding 
   `uvm_object_utils(my_trans)
   
-  // Creating the custom constructor
+  // Creating the custom constructor that will override the parent constructor
   function new(string name = "my_trans");
     super.new(name);
     $display("[ASV INFO CONSTRUCTOR]: my_trans handle has been created");
