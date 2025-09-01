@@ -1,4 +1,8 @@
 // Making Use of build phase to create objects for sequence, driver and monitor inside agent class
+/***VERY IMPORTANT***/
+/* Could not find member 'build_phase' in class 'uvm_sequence_item', at 
+  "/apps/vcsmx/vcs/U-2023.03-SP2//etc/uvm-1.2/src/seq/uvm_sequence_item.svh", 
+we can not use the buil_phase inside a class of any object type, it must be strictly used inside a component type class*/
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
