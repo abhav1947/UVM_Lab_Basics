@@ -40,6 +40,7 @@ class sequencer extends uvm_component;
   endfunction
   
   virtual task run_phase(uvm_phase phase);
+    // uvm objection is like a statement syaing "wait I still have some work to be completed please dont end the uvm phases"
     phase.raise_objection(this);
     repeat(count) begin
       t1.randomize();
