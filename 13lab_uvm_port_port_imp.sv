@@ -39,10 +39,11 @@ class sub_block_a extends uvm_component;
     phase.raise_objection(this);
     repeat(count) begin
       t1.randomize();
-      sb_a_port.put(t1);
       `uvm_info("[UVM_SB_A]", "DATA SENT BY SUB BLOCK A", UVM_NONE);
       `uvm_info("[UVM_SB_A]", $sformatf("_addr_1_32 = %0d",t1._addr_1_32), UVM_NONE);
       `uvm_info("[UVM_SB_A]", $sformatf("_addr_1_32_en = %0d",t1._addr_1_32_en), UVM_NONE);
+      sb_a_port.put(t1);
+      #10;
     end
     phase.drop_objection(this);
   endtask
