@@ -40,6 +40,8 @@ class write_txn extends uvm_sequence_item;
 
   // This is similar to creating a depp copy in SV
   // Here we will override the parent function using the super.do_copy(<object_name>)
+  /*my_obj is a generic uvm_object handle.
+   It could technically point to any object derived from uvm_object*/
   function void copy(uvm_object my_obj);
     write_txn t1;
     $cast(t1,my_obj);
